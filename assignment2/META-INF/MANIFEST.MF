@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: assignment2
+Bundle-ManifestVersion: 2
+Bundle-Name: assignment2
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: assignment2; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ org.eclipse.swt,
+ org.eclipse.xtend.lib;bundle-version="2.14.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: assignment2,
+ assignment2.gameDSL.impl,
+ assignment2.validation,
+ assignment2.scoping,
+ assignment2.parser.antlr.internal,
+ assignment2.parser.antlr,
+ assignment2.gameDSL,
+ assignment2.generator,
+ assignment2.gameDSL.util,
+ assignment2.services,
+ assignment2.serializer
+Import-Package: org.apache.log4j

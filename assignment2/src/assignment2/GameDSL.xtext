@@ -1,0 +1,49 @@
+grammar assignment2.GameDSL with org.eclipse.xtext.common.Terminals
+
+generate gameDSL "http://www.GameDSL.assignment2"
+
+Game:
+    'Game' name=ID grid=Grid
+    'Rules' (rules += Rule)+
+;
+
+Grid:
+	'Grid' 'Size' size=Size 'State' state=State
+;
+
+Size:
+	'('rows=INT','columns=INT')'
+;
+
+State:
+	(alives += Cell)+
+;
+
+Cell:
+	coordinates=Coordinates cellType=CellType
+;
+
+Coordinates:
+	'('row=INT','column=INT')'
+;
+
+enum CellType:
+	DEAD = 'dead' |
+	ALIVE = 'alive'
+;
+
+Rule:
+	'Rule' condition=Condition amount=INT action=Action
+;
+
+enum Action:
+	DIES = 'dies' |
+	SURVIVES = 'survives' |
+	FORMS = 'forms'
+;
+
+enum Condition:
+	GREATER = '>' |
+	LOWER = '<' |
+	EQUAL = '='
+;

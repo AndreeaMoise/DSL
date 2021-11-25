@@ -3,6 +3,8 @@
  */
 package assignment2.validation;
 
+import assignment2.gameDSL.Game;
+
 /**
  * This class contains custom validation rules.
  * 
@@ -10,4 +12,15 @@ package assignment2.validation;
  */
 @SuppressWarnings("all")
 public class GameDSLValidator extends AbstractGameDSLValidator {
+  public Object checkIfCellDiesInUnderpopulation(final Game game) {
+    return null;
+  }
+  
+  public Object checkIfCellLiveInNextGeneration(final Game game) {
+    return null;
+  }
+  
+  public Object checkIfCellDiesInOverpopulation(final Game game) {
+    return null;
+  }
 }

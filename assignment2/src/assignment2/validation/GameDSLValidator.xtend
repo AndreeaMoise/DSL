@@ -3,6 +3,7 @@
  */
 package assignment2.validation
 
+import assignment2.gameDSL.Game
 
 /**
  * This class contains custom validation rules. 
@@ -11,7 +12,6 @@ package assignment2.validation
  */
 class GameDSLValidator extends AbstractGameDSLValidator {
 	
-//	public static val INVALID_NAME = 'invalidName'
 //
 //	@Check
 //	def checkGreetingStartsWithCapital(Greeting greeting) {
@@ -21,5 +21,15 @@ class GameDSLValidator extends AbstractGameDSLValidator {
 //					INVALID_NAME)
 //		}
 //	}
+
+	def checkIfCellDiesInUnderpopulation(Game game) {
+		
+	}
+	def checkIfCellLiveInNextGeneration(Game game) {
+		
+	}
+	def checkIfCellDiesInOverpopulation(Game game) {
+		
+	}
 	
 }

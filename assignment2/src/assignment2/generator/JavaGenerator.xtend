@@ -9,11 +9,10 @@ class JavaGenerator {
 		import java.awt.Point;
 		import java.util.ArrayList;
 		
+		import GameOfLife.GameOfLife.GameBoard;
+		
 		public class RulesOfLife {
 			public static void computeSurvivors(boolean[][] gameBoard, ArrayList<Point> survivingCells) {
-				«FOR c: root.grid.state.alives»
-				gameBoard[«c.coordinates.row»][«c.coordinates.column»] = true;
-				«ENDFOR»
 				
 				// Iterate through the array, follow game of life rules
 				for (int i=1; i<gameBoard.length-1; i++) {
@@ -33,6 +32,12 @@ class JavaGenerator {
 				        «ENDFOR»
 			        }
 			    }
+			}
+			
+			public static void initializeGameBoard(GameBoard gameBoard) {
+				«FOR c: root.grid.state.alives»
+				gameBoard.addPoint(«c.coordinates.row»,«c.coordinates.column»);
+				«ENDFOR»
 			}
 		}
 		

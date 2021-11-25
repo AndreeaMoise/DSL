@@ -10,13 +10,13 @@ class Auxiliary {
 			case Action::DIES:
 				return '''
 				if (gameBoard[i][j] && (surrounding «Auxiliary.getValidCondition(r.condition)» «r.amount»)) {
-					survivingCells.remove(new Point(i-1,j-1));
+					continue;
 				}				        
 				'''
 			case Action::SURVIVES:
 				return '''
 				if (gameBoard[i][j] && (surrounding «Auxiliary.getValidCondition(r.condition)» «r.amount»)) {
-					continue;
+					survivingCells.add(new Point(i-1,j-1));
 				}				        
 				'''
 			case Action::FORMS:

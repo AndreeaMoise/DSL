@@ -74,41 +74,45 @@ public class GameDSLGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "assignment2.GameDSL.Grid");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGridKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cSizeKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSizeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSizeSizeParserRuleCall_2_0 = (RuleCall)cSizeAssignment_2.eContents().get(0);
-		private final Keyword cStateKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cStateAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cStateStateParserRuleCall_4_0 = (RuleCall)cStateAssignment_4.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cSizeKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cSizeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cSizeSizeParserRuleCall_1_1_0 = (RuleCall)cSizeAssignment_1_1.eContents().get(0);
+		private final Keyword cStateKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cStateAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cStateStateParserRuleCall_3_0 = (RuleCall)cStateAssignment_3.eContents().get(0);
 		
 		//Grid:
-		//    'Grid' 'Size' size=Size 'State' state=State
+		//    'Grid' ('Size' size=Size)? 'State' state=State
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Grid' 'Size' size=Size 'State' state=State
+		//'Grid' ('Size' size=Size)? 'State' state=State
 		public Group getGroup() { return cGroup; }
 		
 		//'Grid'
 		public Keyword getGridKeyword_0() { return cGridKeyword_0; }
 		
+		//('Size' size=Size)?
+		public Group getGroup_1() { return cGroup_1; }
+		
 		//'Size'
-		public Keyword getSizeKeyword_1() { return cSizeKeyword_1; }
+		public Keyword getSizeKeyword_1_0() { return cSizeKeyword_1_0; }
 		
 		//size=Size
-		public Assignment getSizeAssignment_2() { return cSizeAssignment_2; }
+		public Assignment getSizeAssignment_1_1() { return cSizeAssignment_1_1; }
 		
 		//Size
-		public RuleCall getSizeSizeParserRuleCall_2_0() { return cSizeSizeParserRuleCall_2_0; }
+		public RuleCall getSizeSizeParserRuleCall_1_1_0() { return cSizeSizeParserRuleCall_1_1_0; }
 		
 		//'State'
-		public Keyword getStateKeyword_3() { return cStateKeyword_3; }
+		public Keyword getStateKeyword_2() { return cStateKeyword_2; }
 		
 		//state=State
-		public Assignment getStateAssignment_4() { return cStateAssignment_4; }
+		public Assignment getStateAssignment_3() { return cStateAssignment_3; }
 		
 		//State
-		public RuleCall getStateStateParserRuleCall_4_0() { return cStateStateParserRuleCall_4_0; }
+		public RuleCall getStateStateParserRuleCall_3_0() { return cStateStateParserRuleCall_3_0; }
 	}
 	public class SizeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "assignment2.GameDSL.Size");
@@ -458,7 +462,7 @@ public class GameDSLGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	
 	//Grid:
-	//    'Grid' 'Size' size=Size 'State' state=State
+	//    'Grid' ('Size' size=Size)? 'State' state=State
 	//;
 	public GridElements getGridAccess() {
 		return pGrid;

@@ -36,6 +36,7 @@ public class GameDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionAccess().getAlternatives(), "rule__Condition__Alternatives");
 			builder.put(grammarAccess.getGameAccess().getGroup(), "rule__Game__Group__0");
 			builder.put(grammarAccess.getGridAccess().getGroup(), "rule__Grid__Group__0");
+			builder.put(grammarAccess.getGridAccess().getGroup_1(), "rule__Grid__Group_1__0");
 			builder.put(grammarAccess.getSizeAccess().getGroup(), "rule__Size__Group__0");
 			builder.put(grammarAccess.getCellAccess().getGroup(), "rule__Cell__Group__0");
 			builder.put(grammarAccess.getCoordinatesAccess().getGroup(), "rule__Coordinates__Group__0");
@@ -43,8 +44,8 @@ public class GameDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getGameAccess().getNameAssignment_1(), "rule__Game__NameAssignment_1");
 			builder.put(grammarAccess.getGameAccess().getGridAssignment_2(), "rule__Game__GridAssignment_2");
 			builder.put(grammarAccess.getGameAccess().getRulesAssignment_4(), "rule__Game__RulesAssignment_4");
-			builder.put(grammarAccess.getGridAccess().getSizeAssignment_2(), "rule__Grid__SizeAssignment_2");
-			builder.put(grammarAccess.getGridAccess().getStateAssignment_4(), "rule__Grid__StateAssignment_4");
+			builder.put(grammarAccess.getGridAccess().getSizeAssignment_1_1(), "rule__Grid__SizeAssignment_1_1");
+			builder.put(grammarAccess.getGridAccess().getStateAssignment_3(), "rule__Grid__StateAssignment_3");
 			builder.put(grammarAccess.getSizeAccess().getRowsAssignment_1(), "rule__Size__RowsAssignment_1");
 			builder.put(grammarAccess.getSizeAccess().getColumnsAssignment_3(), "rule__Size__ColumnsAssignment_3");
 			builder.put(grammarAccess.getStateAccess().getAlivesAssignment(), "rule__State__AlivesAssignment");

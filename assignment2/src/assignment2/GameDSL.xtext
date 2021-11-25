@@ -8,7 +8,7 @@ Game:
 ;
 
 Grid:
-	'Grid' 'Size' size=Size 'State' state=State
+	'Grid' ('Size' size=Size)? 'State' state=State
 ;
 
 Size:

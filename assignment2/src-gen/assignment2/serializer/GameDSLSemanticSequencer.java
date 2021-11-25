@@ -123,19 +123,10 @@ public class GameDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Grid returns Grid
 	 *
 	 * Constraint:
-	 *     (size=Size state=State)
+	 *     (size=Size? state=State)
 	 */
 	protected void sequence_Grid(ISerializationContext context, Grid semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GameDSLPackage.Literals.GRID__SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GameDSLPackage.Literals.GRID__SIZE));
-			if (transientValues.isValueTransient(semanticObject, GameDSLPackage.Literals.GRID__STATE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GameDSLPackage.Literals.GRID__STATE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGridAccess().getSizeSizeParserRuleCall_2_0(), semanticObject.getSize());
-		feeder.accept(grammarAccess.getGridAccess().getStateStateParserRuleCall_4_0(), semanticObject.getState());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

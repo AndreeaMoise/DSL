@@ -22,7 +22,7 @@ public class Auxiliary {
           _builder.append(")) {");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
-          _builder.append("survivingCells.remove(new Point(i-1,j-1));");
+          _builder.append("continue;");
           _builder.newLine();
           _builder.append("}\t\t\t\t        ");
           _builder.newLine();
@@ -38,7 +38,7 @@ public class Auxiliary {
           _builder_1.append(")) {");
           _builder_1.newLineIfNotEmpty();
           _builder_1.append("\t");
-          _builder_1.append("continue;");
+          _builder_1.append("survivingCells.add(new Point(i-1,j-1));");
           _builder_1.newLine();
           _builder_1.append("}\t\t\t\t        ");
           _builder_1.newLine();

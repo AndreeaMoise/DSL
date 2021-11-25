@@ -164,37 +164,39 @@ ruleGrid returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getGridAccess().getGridKeyword_0());
 		}
-		otherlv_1='Size'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGridAccess().getSizeKeyword_1());
-		}
 		(
+			otherlv_1='Size'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getGridAccess().getSizeKeyword_1_0());
+			}
 			(
-				{
-					newCompositeNode(grammarAccess.getGridAccess().getSizeSizeParserRuleCall_2_0());
-				}
-				lv_size_2_0=ruleSize
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGridRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getGridAccess().getSizeSizeParserRuleCall_1_1_0());
 					}
-					set(
-						$current,
-						"size",
-						lv_size_2_0,
-						"assignment2.GameDSL.Size");
-					afterParserOrEnumRuleCall();
-				}
+					lv_size_2_0=ruleSize
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGridRule());
+						}
+						set(
+							$current,
+							"size",
+							lv_size_2_0,
+							"assignment2.GameDSL.Size");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)
+		)?
 		otherlv_3='State'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGridAccess().getStateKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGridAccess().getStateKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGridAccess().getStateStateParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGridAccess().getStateStateParserRuleCall_3_0());
 				}
 				lv_state_4_0=ruleState
 				{
